@@ -1,6 +1,6 @@
 async function GetPosts() {
     try {
-        const posts = await fetch('http://localhost:3030/posts')
+        const posts = await fetch('https://93dc-2804-7f0-b2c1-b8a4-8d37-ea5f-16b0-8323.ngrok-free.app/posts')
         const response = await posts.json()
 
         if(response) {

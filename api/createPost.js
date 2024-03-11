@@ -10,13 +10,12 @@ const button = document.querySelector('#submit').addEventListener('click', async
     }
 
     try {
-        const response = await fetch('http://localhost:3030/createPost', {
+        const response = await fetch('https://93dc-2804-7f0-b2c1-b8a4-8d37-ea5f-16b0-8323.ngrok-free.app/posts', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify({
-                title: 'Nada',
                 content: content
             })
         })
