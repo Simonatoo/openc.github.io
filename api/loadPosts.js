@@ -1,7 +1,16 @@
 async function GetPosts() {
     try {
-        const posts = await fetch('https://93dc-2804-7f0-b2c1-b8a4-8d37-ea5f-16b0-8323.ngrok-free.app/posts')
+        const posts = await fetch('https://4b1e-200-100-197-32.ngrok-free.app/posts', {
+            method: 'GET',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json',
+                "ngrok-skip-browser-warning": "69420" 
+            }
+        })
+        console.log(posts)
         const response = await posts.json()
+        console.log(response)
 
         if(response) {
             LoadPosts(response)
@@ -23,7 +32,7 @@ function LoadPosts(posts) {
         const newPost = document.createElement('my-post')
         const hr = document.createElement('hr')
         newPost.setAttribute('content', post.content)
-        newPost.setAttribute('data', post.create_at)
+        // newPost.setAttribute('data', post.create_at)
         postlist.appendChild(newPost)
         postlist.appendChild(hr)
     })

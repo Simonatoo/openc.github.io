@@ -10,10 +10,12 @@ const button = document.querySelector('#submit').addEventListener('click', async
     }
 
     try {
-        const response = await fetch('https://93dc-2804-7f0-b2c1-b8a4-8d37-ea5f-16b0-8323.ngrok-free.app/posts', {
+        const response = await fetch('https://4b1e-200-100-197-32.ngrok-free.app/posts', {
             method: 'POST',
+            mode: 'cors',
             headers: {
-                'Content-type': 'application/json',
+                'Content-Type': 'application/json',
+                "ngrok-skip-browser-warning": "69420" 
             },
             body: JSON.stringify({
                 content: content
