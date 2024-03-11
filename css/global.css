@@ -1,0 +1,21 @@
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    resize: none;
+}
+
+form {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.actions {
+    margin-top: 12px;
+}
+
+.actions button {
+    padding: 8px;
+    font-size: 14px;
+}

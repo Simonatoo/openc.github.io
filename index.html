@@ -3,9 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/global.css">
     <title>Document</title>
 </head>
-<body>
-   <h1>Hello World!</h1> 
+<body onload=GetPosts()>
+    <header>
+        <h1>Openc - sua rede antisocial</h1>
+        <p>Compartilhe suas ideias de forma anonima.</p>
+    </header>
+    <form action="" method="post">
+        <textarea id="content" maxlength="500"></textarea>
+        <div class="actions">
+            <button id="submit">Publicar</button>
+        </div>
+    </form>
+    <h1 class="container">Feed</h1> 
+    <div id="postList"></div>
+
+    <script src="./api/loadPosts.js"></script>
+    <script src="./api/createPost.js"></script>
+    <script src="./components/post.js"></script>
 </body>
 </html>
